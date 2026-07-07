@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIM'O</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="scene page">
+    <div class="token-rain" id="tokenRain" aria-hidden="true"></div>
+
+    <img class="avatar avatar-left" src="assets/av_3.png" alt="">
+    <img class="avatar avatar-right" src="assets/av_4.png" alt="">
+
+    <div class="brand">
+      <h1 class="brand-title">prim'O</h1>
+      <p class="brand-tagline">Vos efforts récompensés instantanément !</p>
+    </div>
+
+    <a href="#employeur" class="scroll-hint" aria-label="Découvrir l'application">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="page feature" id="employeur">
+    <div class="feature-inner">
+      <div class="feature-text">
+        <span class="feature-tag">Espace Employeur</span>
+        <h2>Pilotez la reconnaissance de toute l'entreprise</h2>
+        <p>Achetez des tokens, suivez votre stock en un coup d'œil et partagez votre QR code partenaire pour recruter vos équipes. Depuis son dashboard, l'employeur garde une vue complète sur ses managers, ses collaborateurs et la répartition des rétributions.</p>
+        <ul class="feature-points">
+          <li>Achat et suivi du stock de tokens de l'entreprise</li>
+          <li>Gestion des équipes et des managers</li>
+          <li>Réglage de la rétribution par token et par manager</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="phone-frame">
+          <span class="phone-notch"></span>
+          <img src="assets/ecran-employer.png" alt="Dashboard employeur PRIM'O">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page feature feature--reverse" id="manageur">
+    <div class="feature-inner">
+      <div class="feature-text">
+        <span class="feature-tag">Espace Manageur</span>
+        <h2>Récompensez chaque performance en un tap</h2>
+        <p>Chaque manager dispose de son propre stock de tokens à distribuer à son équipe. D'un seul écran, il visualise le solde de sa caisse, celui de chaque collaborateur, et alloue une récompense dès qu'une performance mérite d'être saluée.</p>
+        <ul class="feature-points">
+          <li>Stock d'équipe et solde personnel toujours visibles</li>
+          <li>Liste des collaborateurs et de leurs tokens accumulés</li>
+          <li>Allocation de récompense instantanée, sans friction</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="phone-frame">
+          <span class="phone-notch"></span>
+          <img src="assets/ecran-manageur.png" alt="Dashboard manageur PRIM'O">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page feature" id="catalogue">
+    <div class="feature-inner">
+      <div class="feature-text">
+        <span class="feature-tag">Catalogue</span>
+        <h2>Des tokens échangeables contre de vraies récompenses</h2>
+        <p>Sport, voyage, bien-être, culture... les collaborateurs parcourent un catalogue vivant de bons chez des partenaires locaux et nationaux, filtrable par catégorie, et échangent leurs tokens en quelques secondes contre la récompense de leur choix.</p>
+        <ul class="feature-points">
+          <li>Recherche et tri par nouveautés ou popularité</li>
+          <li>Filtres par catégorie : sport, voyage, culture...</li>
+          <li>Échange immédiat des tokens contre un bon</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="phone-frame">
+          <span class="phone-notch"></span>
+          <img src="assets/ecran-catalogue.png" alt="Catalogue de récompenses PRIM'O">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page feature feature--reverse" id="parametres">
+    <div class="feature-inner">
+      <div class="feature-text">
+        <span class="feature-tag">Paramètres</span>
+        <h2>Un espace personnel simple et sécurisé</h2>
+        <p>Chaque utilisateur retrouve son profil, ses informations personnelles et la sécurité de son compte en un tap, quel que soit son rôle dans l'entreprise — employeur, manager ou collaborateur.</p>
+        <ul class="feature-points">
+          <li>Modification des informations personnelles et du mot de passe</li>
+          <li>Accès rapide à l'aide et aux CGU</li>
+          <li>Déconnexion et gestion du compte centralisées</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="phone-frame">
+          <span class="phone-notch"></span>
+          <img src="assets/ecran-parametre.png" alt="Paramètres du compte PRIM'O">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page cta">
+    <div class="cta-inner">
+      <h2 class="cta-slogan">Récompensez vos talents, retenez vos meilleurs éléments.</h2>
+      <p class="cta-text">Rejoignez les entreprises qui font de la reconnaissance un réflexe quotidien. Scannez le QR code ou rendez-vous sur le site pour démarrer avec PRIM'O.</p>
+
+      <div class="cta-qr-card">
+        <img src="assets/qr-primo.svg" alt="QR code vers l'application PRIM'O" class="cta-qr">
+      </div>
+
+      <a class="cta-link" href="https://prim-o.vercel.app/" target="_blank" rel="noopener">prim-o.vercel.app</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

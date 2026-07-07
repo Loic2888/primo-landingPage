@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+body {
+  width: 100%;
+  background: #12a19a;
+}
+
+.page {
+  scroll-snap-align: start;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #12a19a;
+}
+
+/* 1. Titre + tagline, même police que le logo (Mali, proche du lettrage d'origine) */
+.brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 16px;
+}
+
+.brand-title {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: clamp(4.5rem, 14vw, 9rem);
+  line-height: 1;
+  margin: 0 0 0.35em;
+}
+
+.brand-tagline {
+  font-family: 'Mali', cursive;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  margin: 0;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 28px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+}
+
+.scroll-hint span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  margin-left: -2px;
+  background: #fff;
+  border-radius: 2px;
+  animation: scroll-hint-move 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-move {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(14px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+/* 2. Pluie de tokens */
+.token-rain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.token {
+  position: absolute;
+  top: -10%;
+  width: 32px;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(115vh) rotate(360deg);
+  }
+}
+
+/* 3. Avatars */
+.avatar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 68%;
+  max-height: 620px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+}
+
+.avatar-left {
+  left: 1%;
+}
+
+.avatar-right {
+  right: 1%;
+}
+
+/* 4. Sections de présentation de l'app */
+.feature {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 96px 40px;
+}
+
+.feature--reverse {
+  background: #f3faf9;
+}
+
+.feature-inner {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.feature--reverse .feature-inner {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1 1 420px;
+  max-width: 480px;
+  color: #10241f;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(18, 161, 154, 0.12);
+  color: #0c8a83;
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.feature-text h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: #0a1f1a;
+}
+
+.feature-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #445753;
+  margin-bottom: 22px;
+}
+
+.feature-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-points li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.98rem;
+  color: #29423c;
+}
+
+.feature-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #12a19a;
+  box-shadow: 0 0 0 4px rgba(18, 161, 154, 0.15);
+}
+
+.feature-visual {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Mockup téléphone */
+.phone-frame {
+  position: relative;
+  width: 270px;
+  aspect-ratio: 335 / 692;
+  background: #111318;
+  border-radius: 40px;
+  padding: 16px 10px;
+  box-shadow:
+    0 30px 60px rgba(10, 30, 25, 0.25),
+    0 0 0 2px rgba(255, 255, 255, 0.06) inset;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 20px;
+  background: #111318;
+  border-radius: 0 0 14px 14px;
+  z-index: 1;
+}
+
+.phone-frame img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+  display: block;
+}
+
+/* 5. Section finale : téléchargement / call-to-action */
+.cta {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #0c7a74 0%, #12a19a 55%, #16b6ad 100%);
+  padding: 96px 24px;
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-slogan {
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.cta-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.cta-qr-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 24px 48px rgba(6, 40, 36, 0.35);
+  margin-bottom: 24px;
+}
+
+.cta-qr {
+  display: block;
+  width: 180px;
+  height: 180px;
+}
+
+.cta-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.cta-link:hover {
+  border-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .avatar {
+    height: 45%;
+    max-height: 380px;
+  }
+
+  .avatar-left {
+    left: -2%;
+  }
+
+  .avatar-right {
+    right: -2%;
+  }
+
+  .token {
+    width: 22px;
+  }
+
+  .feature {
+    padding: 72px 24px;
+  }
+
+  .feature-inner,
+  .feature--reverse .feature-inner {
+    flex-direction: column;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .feature-points {
+    text-align: left;
+  }
+
+  .phone-frame {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    height: 34%;
+    max-height: 280px;
+    opacity: 0.9;
+  }
+
+  .phone-frame {
+    width: 190px;
+  }
+}
