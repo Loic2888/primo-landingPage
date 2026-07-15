@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="scene page">
+  <section class="scene page" id="hero">
     <div class="token-rain" id="tokenRain" aria-hidden="true"></div>
 
     <img class="avatar avatar-left" src="assets/av_3.png" alt="">
@@ -45,6 +45,13 @@
         </div>
       </div>
     </div>
+
+    <a href="#hero" class="scroll-nav scroll-nav-up" aria-label="Revenir en haut">
+      <span></span>
+    </a>
+    <a href="#manageur" class="scroll-nav scroll-nav-down" aria-label="Découvrir l'espace manageur">
+      <span></span>
+    </a>
   </section>
 
   <section class="page feature feature--reverse" id="manageur">
@@ -66,6 +73,13 @@
         </div>
       </div>
     </div>
+
+    <a href="#employeur" class="scroll-nav scroll-nav-up" aria-label="Revenir à l'espace employeur">
+      <span></span>
+    </a>
+    <a href="#catalogue" class="scroll-nav scroll-nav-down" aria-label="Découvrir le catalogue">
+      <span></span>
+    </a>
   </section>
 
   <section class="page feature" id="catalogue">
@@ -87,6 +101,13 @@
         </div>
       </div>
     </div>
+
+    <a href="#manageur" class="scroll-nav scroll-nav-up" aria-label="Revenir à l'espace manageur">
+      <span></span>
+    </a>
+    <a href="#parametres" class="scroll-nav scroll-nav-down" aria-label="Découvrir les paramètres">
+      <span></span>
+    </a>
   </section>
 
   <section class="page feature feature--reverse" id="parametres">
@@ -108,9 +129,53 @@
         </div>
       </div>
     </div>
+
+    <a href="#catalogue" class="scroll-nav scroll-nav-up" aria-label="Revenir au catalogue">
+      <span></span>
+    </a>
+    <a href="#about" class="scroll-nav scroll-nav-down" aria-label="Découvrir notre histoire">
+      <span></span>
+    </a>
   </section>
 
-  <section class="page cta">
+  <section class="page about" id="about">
+    <div class="about-inner">
+      <span class="feature-tag">Notre histoire</span>
+      <h2 class="about-title">Pourquoi PRIM'O ?</h2>
+
+      <div class="about-story">
+        <p>PRIM'O est porté par Julien Sax et Sandrine Simonnet, et né d'un constat de terrain issu de 20 ans d'entrepreneuriat et 10 ans de conseil en marketing et management auprès de grands groupes de franchises. Le problème observé est simple mais fondamental : dans la grande majorité des entreprises, la prime ou la récompense arrive trop tard pour motiver réellement. Elle se noie dans le salaire, arrive après l'effort, et perd tout effet motivationnel. La psychologie comportementale le confirme : une récompense doit être immédiate pour être efficace.</p>
+        <p>C'est ce constat qui a convaincu Loïc Cerqueira et Véronique Beauvais, en charge du développement du projet, de s'investir dans PRIM'O : ayant eux-mêmes été salariés, ils savent combien une reconnaissance instantanée peut pousser à donner le meilleur de soi-même. Ensemble, ils ont construit une application qui permet à l'employeur de récompenser ses collaborateurs en temps réel, au moment exact où la performance se produit.</p>
+        <p class="about-holberton">Ce projet a vu le jour en 2026, développé comme projet tutoré de fin de cursus (Portfolio Project) à la <a href="https://www.holbertonschool.com/" target="_blank" rel="noopener">Holberton School</a>.</p>
+      </div>
+
+      <div class="about-team">
+        <a class="team-card" href="https://www.linkedin.com/in/lo%C3%AFc-cerqueira-b721a2364/" target="_blank" rel="noopener">
+          <span class="team-name">Loïc Cerqueira</span>
+          <span class="team-role">Développeur</span>
+          <span class="team-link">Voir le profil LinkedIn →</span>
+        </a>
+        <a class="team-card" href="https://www.linkedin.com/in/veronique-beauvais/" target="_blank" rel="noopener">
+          <span class="team-name">Véronique Beauvais</span>
+          <span class="team-role">Développeuse</span>
+          <span class="team-link">Voir le profil LinkedIn →</span>
+        </a>
+      </div>
+
+      <a class="about-repo" href="https://github.com/Veroniquebvs/prim_o" target="_blank" rel="noopener">
+        Voir le code source sur GitHub
+      </a>
+    </div>
+
+    <a href="#parametres" class="scroll-nav scroll-nav-up" aria-label="Revenir aux paramètres">
+      <span></span>
+    </a>
+    <a href="#cta" class="scroll-nav scroll-nav-down" aria-label="Découvrir la dernière page">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="page cta" id="cta">
     <div class="cta-inner">
       <h2 class="cta-slogan">Récompensez vos talents, retenez vos meilleurs éléments.</h2>
       <p class="cta-text">Rejoignez les entreprises qui font de la reconnaissance un réflexe quotidien. Scannez le QR code ou rendez-vous sur le site pour démarrer avec PRIM'O.</p>
@@ -121,6 +186,10 @@
 
       <a class="cta-link" href="https://prim-o.vercel.app/" target="_blank" rel="noopener">prim-o.vercel.app</a>
     </div>
+
+    <a href="#about" class="scroll-nav scroll-nav-up" aria-label="Revenir à notre histoire">
+      <span></span>
+    </a>
   </section>
 
   <script src="script.js"></script>
