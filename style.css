@@ -18,6 +18,40 @@ body {
   scroll-snap-align: start;
 }
 
+/* Navbar fixe de navigation rapide */
+.main-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .scene {
   position: relative;
   width: 100vw;
@@ -125,11 +159,11 @@ body {
 }
 
 .avatar-left {
-  left: 1%;
+  left: 8%;
 }
 
 .avatar-right {
-  right: 1%;
+  right: 8%;
 }
 
 /* 4. Sections de présentation de l'app */
@@ -209,6 +243,7 @@ body {
   flex: 1 1 420px;
   max-width: 480px;
   color: #10241f;
+  text-align: center;
 }
 
 .feature-tag {
@@ -242,6 +277,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .feature-points li {
@@ -332,7 +370,7 @@ body {
 }
 
 .about-story {
-  text-align: left;
+  text-align: center;
 }
 
 .about-story p {
@@ -519,6 +557,16 @@ body {
 
   .token {
     width: 22px;
+  }
+
+  .main-nav {
+    top: 12px;
+    gap: 0;
+  }
+
+  .main-nav a {
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 
   .feature {
